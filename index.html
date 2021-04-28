@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>progress</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"> -->
+  </head>
+  <body>
+    <div id="app">
+      <div id="test_video"></div>
+      <!-- <div class="poor-video-control-bar">
+        <div class="progress" id="__progress">
+          <div class="progressing" id="__progressing">
+            <span id="__point"></span>
+          </div>
+        </div>
+        <div class="control-box">
+          <div class="poor-video-play-pause" video-state="u">
+          </div>
+          <div ></div>
+          <div class="poor-video-volume">
+            <img src="data:image/png;base64,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" alt="">
+          </div>
+        </div>
+      </div> -->
+    </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script> -->
+    <script src="./js/index.js"></script>
+  </body>
+  </html>
